@@ -29,7 +29,38 @@ let canvas = Canvas(width: 400, height: 600)
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
-// Begin your solution here...
+//move the origin
+canvas.translate(to: Point(x:0, y:400))
+
+//canvas background
+canvas.fillColor = lightGrey
+canvas.drawRectangle(at: Point(x: 0, y: -400), width: 400, height: 600)
+
+//print text
+canvas.rotate(by: 260)
+
+for text in 1...18{
+    canvas.rotate(by: Degrees(5.5))
+    canvas.textColor = Color(hue: 0, saturation: 100, brightness: 0, alpha: 10+text*5)
+    canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 70)
+
+}
+//print the lines above the title
+canvas.translate(to: Point(x: 0, y: -400))
+canvas.textColor = deepRed
+canvas.drawText(message: "straights music presents", at: Point(x:14,y:550), size: 9)
+canvas.drawText(message: "the undertones", at: Point(x:14,y:540), size: 9)
+canvas.drawText(message: "the special guests", at: Point(x:14,y:520), size: 9)
+canvas.drawText(message: "the chords", at: Point(x:14,y:510), size: 9)
+
+canvas.textColor = deepRed
+canvas.drawText(message: "victoria hall hanley", at: Point(x:150,y:550), size: 9)
+canvas.drawText(message: "stroke-on-trent, England", at: Point(x:150,y:540), size: 9)
+canvas.drawText(message: "tuesday", at: Point(x:150,y:520), size: 9)
+canvas.drawText(message: "june 5 1979/ 7:30 pm", at: Point(x:150,y:510), size: 9)
+
+canvas.drawText(message: "advance tickets: 2.00", at: Point(x:270,y:550), size: 9)
+canvas.drawText(message: "at the door: 2.00", at: Point(x:270,y:535), size: 9)
 
 
 /*:
