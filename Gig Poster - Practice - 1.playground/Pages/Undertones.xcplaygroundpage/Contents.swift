@@ -37,12 +37,11 @@ canvas.fillColor = lightGrey
 canvas.drawRectangle(at: Point(x: 0, y: -400), width: 400, height: 600)
 
 //print text
-canvas.rotate(by: 260)
-
-for text in 1...18{
-    canvas.rotate(by: Degrees(5.5))
-    canvas.textColor = Color(hue: 0, saturation: 100, brightness: 0, alpha: 10+text*5)
-    canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 70)
+canvas.rotate(by: 265)
+for text in 1...19{
+    canvas.rotate(by: Degrees(5))
+    canvas.textColor = Color(hue: 0, saturation: 100, brightness: 0, alpha: 5+text*5)
+    canvas.drawText(message: " undertones", at: Point(x: -10, y: -30), size: 70)
 
 }
 //print the lines above the title
